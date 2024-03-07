@@ -1,4 +1,10 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Coin Price from CoinGecko Using Python</title>
+</head>
 <body>
     <h1>Get Coin Price from CoinGecko Using Python</h1>
 
@@ -58,3 +64,4 @@
         <li>For frequent use or production environments, explore obtaining a CoinGecko API key.</li>
     </ul>
 </body>
+</html>
