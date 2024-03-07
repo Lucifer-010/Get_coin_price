@@ -3,60 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Coin Price from CoinGecko Using Python</title>
+    <title>README: Get Coin Price from CoinGecko using Python</title>
 </head>
 <body>
-    <h1>Get Coin Price from CoinGecko Using Python</h1>
+    <h1>Get Coin Price from CoinGecko using Python</h1>
 
-    <p>This guide explores how to leverage Python's capabilities to retrieve real-time cryptocurrency price data from CoinGecko's public API.</p>
+    <p>This script retrieves the current price of a specified cryptocurrency from CoinGecko using the Python programming language and the CoinGecko API.</p>
 
-    <h2>Prerequisites</h2>
+    <h2>Requirements</h2>
 
     <ul>
-        <li>Python 3.x installed: <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></li>
-        <li><code>requests</code> library: Install using pip: <code>pip install requests</code></li>
-        <li>Optional: CoinGecko API key (for higher request limits): <a href="https://www.coingecko.com/en/api">https://www.coingecko.com/en/api</a></li>
+        <li>Python 3.6 or later</li>
+        <li>requests library: `pip install requests`</li>
     </ul>
 
-    <h2>Steps</h2>
+    <h2>Usage</h2>
 
-    <ol>
-        <li>Install the <code>requests</code> library:</li>
-        <pre><code>pip install requests</code></pre>
-        <li>Import necessary libraries:</li>
-        <pre><code>import requests</code></pre>
-        <li>Construct the API request URL:</li>
-        <pre><code>api_url = "https://api.coingecko.com/api/v3/simple/price"
+    <p>1. Clone or download this repository.</p>
+    <p>2. Install the required library: `pip install requests`.</p>
+    <p>3. Replace `'bitcoin'` in the script with the desired cryptocurrency ID (e.g., `'ethereum'`, `'binance-coin'`).</p>
+    <p>4. Run the script: `python get_coin_price.py`.</p>
 
-params = {
-    "ids": "bitcoin",
-    "vs_currencies": "usd",
-    // Optional parameters:
-    // "include_market_cap": "true",
-    // "include_24h_vol": "true",
-    // "localization": "false",  // Set to "true" for localized prices
-}</code></pre>
-        <li>Make the API request:</li>
-        <pre><code>response = requests.get(api_url, params=params)</code></pre>
-        <li>Handle the response:</li>
-        <pre><code>if response.status_code == 200:
-    data = response.json()
-    coin_price = data["bitcoin"]["usd"]
-    print(f"The current price of Bitcoin (BTC) in USD is: ${coin_price}")
-else:
-    print(f"Error: {response.status_code}")</code></pre>
-    </ol>
+    <h2>Example Output</h2>
+
+    <pre>The current price of Bitcoin (BTC) is $42,345.67.</pre>
 
     <h2>Explanation</h2>
 
-    <p>The code imports the <code>requests</code> library for making HTTP requests to the CoinGecko API. The API URL is constructed, and parameters are specified. The <code>requests.get()</code> function sends a GET request. The response is handled, and the coin price is extracted and printed.</p>
-
-    <h2>Additional Considerations</h2>
-
-    <ul>
-        <li>Replace 'bitcoin' and 'usd' with your desired coin ID and currency.</li>
-        <li>Consider error handling.</li>
-        <li>For frequent use, obtain a CoinGecko API key.</li>
-    </ul>
+    <p>The script utilizes the `requests` library to send an HTTP GET request to the CoinGecko API endpoint for the specified cryptocurrency. The API response is then parsed to extract the current price and formatted for output.</p>
 </body>
 </html>
